@@ -9,10 +9,11 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private Transform bulletSpawn;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float bulletLifetime;
+
     // Update is called once per frame
     void Update()
-    {  //Find what left mouse click is
-        if (Input.GetKeyDown(KeyCode.Space))
+    {  //Left click to fire
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Fire();
         }
@@ -26,7 +27,7 @@ public class PlayerShooting : MonoBehaviour
     {
         //shoot bullet
         Rigidbody2D bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
-        bullet.velocity = Vector2.up * 100;
+        bullet.velocity = transform.up * 100;
         Destroy(bullet.gameObject, 1.0f);
     }
 }

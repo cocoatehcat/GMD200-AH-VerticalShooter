@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthDisplay : MonoBehaviour
@@ -26,6 +27,14 @@ public class HealthDisplay : MonoBehaviour
         for (int i = 0; i < heartImages.Length; i++)
         {
             heartImages[i].fillAmount = (obj - i * numSegments) / (float)numSegments;
+        }
+    }
+
+    void Update()
+    {
+        if (PlayerHealth.GetHealth() <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 }

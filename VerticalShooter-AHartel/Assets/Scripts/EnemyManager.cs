@@ -14,6 +14,7 @@ public class EnemyManager : MonoBehaviour
     }
 
     //Spawns enemies after waiting for a specified amount of time
+    //Re look at turotial to make different waves, 3 then 6 then French
     IEnumerator Co_SpawnEnemies()
     {
         while (true)
