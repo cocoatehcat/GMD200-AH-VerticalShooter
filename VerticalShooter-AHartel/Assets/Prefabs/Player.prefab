@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 6661576743725797401}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.012, y: 0.817, z: 0}
+  m_LocalPosition: {x: 0, y: 0.817, z: 0}
   m_LocalScale: {x: 1.2917, y: 1.2917, z: 1.2917}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42,6 +42,9 @@ GameObject:
   - component: {fileID: 3918381120838191609}
   - component: {fileID: 4548481751313293214}
   - component: {fileID: 8200661590176177068}
+  - component: {fileID: 6039723095785973825}
+  - component: {fileID: 8667529596472922227}
+  - component: {fileID: 8005227308469954623}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -129,7 +132,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f80eeffd8713e4195be72416ff0447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: -5533200461711029660, guid: 29744a2a3de117e4687ab8cf1e7e24fc, type: 3}
+  bulletPrefab: {fileID: 0}
   bulletSpawn: {fileID: 3279305115103510307}
   bulletSpeed: 0
   bulletLifetime: 0
+--- !u!50 &6039723095785973825
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6963491356156073562}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &8667529596472922227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6963491356156073562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d171a7bd7efb964cb443336c93d6b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: {x: 10, y: 5}
+  boundsLeft: -2
+  boundsRight: 2
+  boundsTop: 5
+  boundsBottom: -5
+--- !u!114 &8005227308469954623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6963491356156073562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b43269c043127458b25a0016ea72e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     public GameObject enemyPrefab;
+    public static EnemyManager instance;
     private Coroutine _enemySpawn;
 
     void Start()
