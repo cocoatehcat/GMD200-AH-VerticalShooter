@@ -2,17 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Score : MonoBehaviour
+public static class Score
 {
-    // Start is called before the first frame update
-    void Start()
+    public static int score;
+
+    public static int GetScore()
     {
-        
+        return score;
     }
 
-    // Update is called once per frame
-    void Update()
+    public static void SetScore(int scored)
     {
-        
+        if (score == scored)
+        {
+            return;
+        }
+        score = scored;
     }
+
+    public static void IncreaseScore()
+    {
+        score++;
+    }
+
 }
