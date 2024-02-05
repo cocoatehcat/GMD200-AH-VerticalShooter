@@ -8,27 +8,47 @@ public class EnemyManager : MonoBehaviour
     public GameObject enemyPrefab2;
     public static EnemyManager instance;
     private Coroutine _enemySpawn;
-    private bool waveOne = false;
 
     void Start()
     {
-        waveOne = true;
         _enemySpawn = StartCoroutine(Co_SpawnEnemies());
     }
 
     //Spawns enemies after waiting for a specified amount of time
-    //Re look at turotial to make different waves, 3 (60 secs) then 6 (120 secs) then French
     IEnumerator Co_SpawnEnemies()
     {
-        while (waveOne == true)
-        {
+        //Wave One
+        for (int i = 0; i <= 13; i++) {
             var pos = new Vector2(Random.Range(-2.5f, 2.5f), 4.43f);
             Instantiate(enemyPrefab, pos, Quaternion.identity);
-            yield return new WaitForSeconds(0.8f);
+            yield return new WaitForSeconds(1.1f);
             var pos1 = new Vector2(Random.Range(-2.5f, 2.5f), 4.43f);
             Instantiate(enemyPrefab2, pos1, Quaternion.identity);
+            yield return new WaitForSeconds(1.1f);
+        }
+
+        //Wave Two
+        for (int i = 0; i <= 11; i++)
+        {
+            var pos2 = new Vector2(Random.Range(-2.5f, 2.5f), 4.43f);
+            Instantiate(enemyPrefab, pos2, Quaternion.identity);
+            yield return new WaitForSeconds(0.8f);
+            var pos3 = new Vector2(Random.Range(-2.5f, 2.5f), 4.43f);
+            Instantiate(enemyPrefab2, pos3, Quaternion.identity);
             yield return new WaitForSeconds(0.8f);
         }
+        
+        //Wave Three
+        for (int i = 0; i <= 9; i++)
+        {
+            var pos3 = new Vector2(Random.Range(-2.5f, 2.5f), 4.43f);
+            Instantiate(enemyPrefab, pos3, Quaternion.identity);
+            yield return new WaitForSeconds(0.5f);
+            var pos4 = new Vector2(Random.Range(-2.5f, 2.5f), 4.43f);
+            Instantiate(enemyPrefab2, pos4, Quaternion.identity);
+            yield return new WaitForSeconds(0.5f);
+        }
+
     }
 
     // Update is called once per frame

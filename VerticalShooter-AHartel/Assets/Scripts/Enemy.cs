@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -28,6 +29,20 @@ public class Enemy : MonoBehaviour
             Instantiate(explosionPrefab, transform.position, transform.rotation);
             Score.IncreaseScore();
             Debug.Log(Score.GetScore());
+
+            if (Score.GetScore() > 50)
+            {
+                SceneManager.LoadScene("Cutscene");
+            }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(enemy.gameObject);
+            player.GetComponent<PlayerTest>().takeDamage();
         }
     }
 

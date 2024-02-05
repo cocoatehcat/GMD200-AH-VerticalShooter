@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public static class PlayerHealth
 {
     public static event Action<int> healthChanged;
-    private static int _health = 20;
+    private static int _health = 12;
     public static void SetHealth(int health)
     {
         if (_health == health)
