@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
 
             if (Score.GetScore() > 50)
             {
-                SceneManager.LoadScene("Cutscene");
+                SceneManager.LoadScene("French");
             }
         }
     }
