@@ -36,9 +36,10 @@ public class Enemy : MonoBehaviour
             }
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("Damage");
+        //GameObject gamecollid = collision.gameObject;
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(enemy.gameObject);

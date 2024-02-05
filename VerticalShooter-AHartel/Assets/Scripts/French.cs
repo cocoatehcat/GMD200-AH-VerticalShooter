@@ -10,7 +10,7 @@ public class French : MonoBehaviour
     public Transform bagPos;
 
     private float timer;
-    private int fHealth = 10;
+    private int fHealth = 15;
     // Start is called before the first frame update
     void Start()
     {

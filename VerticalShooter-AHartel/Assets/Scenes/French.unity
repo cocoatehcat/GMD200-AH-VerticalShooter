@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &70608925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5588030516832719852, guid: 73d63b65523a1684b9e01411c944d439, type: 3}
+  m_PrefabInstance: {fileID: 1288387160}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &109327241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -621,6 +626,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8223606827180817273, guid: 73d63b65523a1684b9e01411c944d439, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
+      value: 4.4219875
+      objectReference: {fileID: 0}
+    - target: {fileID: -8223606827180817273, guid: 73d63b65523a1684b9e01411c944d439, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
+      value: 2.9712238
+      objectReference: {fileID: 0}
+    - target: {fileID: -8223606827180817273, guid: 73d63b65523a1684b9e01411c944d439, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
+      value: -4.445775
+      objectReference: {fileID: 0}
+    - target: {fileID: -8223606827180817273, guid: 73d63b65523a1684b9e01411c944d439, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
+      value: 2.925315
+      objectReference: {fileID: 0}
+    - target: {fileID: -8223606827180817273, guid: 73d63b65523a1684b9e01411c944d439, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
+      value: -4.285927
+      objectReference: {fileID: 0}
+    - target: {fileID: -8223606827180817273, guid: 73d63b65523a1684b9e01411c944d439, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
+      value: -2.8691776
+      objectReference: {fileID: 0}
+    - target: {fileID: -8223606827180817273, guid: 73d63b65523a1684b9e01411c944d439, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: 4.309712
+      objectReference: {fileID: 0}
+    - target: {fileID: -8223606827180817273, guid: 73d63b65523a1684b9e01411c944d439, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: -2.8912997
+      objectReference: {fileID: 0}
+    - target: {fileID: -5533200461711029660, guid: 73d63b65523a1684b9e01411c944d439, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5533200461711029660, guid: 73d63b65523a1684b9e01411c944d439, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5588030516832719852, guid: 73d63b65523a1684b9e01411c944d439, type: 3}
       propertyPath: m_Name
       value: baguette
@@ -665,6 +710,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8362419434440601040, guid: 73d63b65523a1684b9e01411c944d439, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 70608925}
     - target: {fileID: 8362419434440601040, guid: 73d63b65523a1684b9e01411c944d439, type: 3}
       propertyPath: player
       value: 

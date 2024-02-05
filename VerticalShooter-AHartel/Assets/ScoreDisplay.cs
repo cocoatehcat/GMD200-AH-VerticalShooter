@@ -18,9 +18,9 @@ public class ScoreDisplay : MonoBehaviour
         var ahh = Score.GetScore();
         scoreText.text = ahh.ToString();
     }
-    /*public void UpdateScore(int scoreToAdd)
+    public void UpdateScore(int scoreToAdd)
     {
         var ahh = Score.GetScore() + scoreToAdd;
         scoreText.text = ahh.ToString();
-    } */
+    } 
 }
