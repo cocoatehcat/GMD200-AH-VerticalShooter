@@ -5,11 +5,10 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     public GameObject enemyPrefab;
+    public GameObject enemyPrefab2;
     public static EnemyManager instance;
     private Coroutine _enemySpawn;
     private bool waveOne = false;
-    private bool waveTwo = false;
-    private bool waveThree = false;
 
     void Start()
     {
@@ -23,38 +22,13 @@ public class EnemyManager : MonoBehaviour
     {
         while (waveOne == true)
         {
-            Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(2.0f);
-            Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(2.0f);
+            var pos = new Vector2(Random.Range(-2.5f, 2.5f), 4.43f);
+            Instantiate(enemyPrefab, pos, Quaternion.identity);
+            yield return new WaitForSeconds(0.8f);
+            var pos1 = new Vector2(Random.Range(-2.5f, 2.5f), 4.43f);
+            Instantiate(enemyPrefab2, pos1, Quaternion.identity);
+            yield return new WaitForSeconds(0.8f);
         }
-        while (waveTwo == true)
-        {
-            Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(2.0f);
-        }
-
-        while(waveThree == true)
-        {
-            //impliment French
-        }
-    }
-
-    public int CheckWave()
-    {
-        if (waveOne == true)
-        {
-            return 1;
-        }
-        if (waveTwo == true)
-        {
-            return 2;
-        }
-        if (waveThree == true)
-        {
-            return 3;
-        }
-        return 0;
     }
 
     // Update is called once per frame
