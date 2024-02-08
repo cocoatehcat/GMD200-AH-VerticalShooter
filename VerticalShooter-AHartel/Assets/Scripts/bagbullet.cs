@@ -28,10 +28,4 @@ public class bagbullet : MonoBehaviour
             player.GetComponent<PlayerTest>().takeDamage();
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

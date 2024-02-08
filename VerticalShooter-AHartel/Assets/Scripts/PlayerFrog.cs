@@ -10,6 +10,4 @@ public class PlayerTest : MonoBehaviour
     {
         PlayerHealth.SetHealth(PlayerHealth.GetHealth() - 1);
     }
-
-    
 }

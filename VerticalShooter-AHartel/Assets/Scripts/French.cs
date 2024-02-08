@@ -11,12 +11,7 @@ public class French : MonoBehaviour
 
     private float timer;
     private int fHealth = 15;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+ 
     // Update is called once per frame
     void Update()
     {

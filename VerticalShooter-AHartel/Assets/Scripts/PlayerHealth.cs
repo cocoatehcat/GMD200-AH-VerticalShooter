@@ -23,6 +23,4 @@ public static class PlayerHealth
         return _health;
     }
 
-    
-
 }
